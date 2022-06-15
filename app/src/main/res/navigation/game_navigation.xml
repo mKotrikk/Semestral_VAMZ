@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_navigation"
+    app:startDestination="@id/bedroomFragment">
+    <fragment
+        android:id="@+id/bedroomFragment"
+        android:name="com.mkotrik.tamagopet.game.fragments.BedroomFragment"
+        android:label="fragment_bedroom"
+        tools:layout="@layout/fragment_bedroom" >
+        <action
+            android:id="@+id/action_bedroomFragment_to_kitchenFragment"
+            app:destination="@id/kitchenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kitchenFragment"
+        android:name="com.mkotrik.tamagopet.game.fragments.KitchenFragment"
+        android:label="fragment_kitchen"
+        tools:layout="@layout/fragment_kitchen" >
+        <action
+            android:id="@+id/action_kitchenFragment_to_bedroomFragment"
+            app:destination="@id/bedroomFragment" />
+    </fragment>
+</navigation>

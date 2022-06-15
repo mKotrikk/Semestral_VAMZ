@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">TamagoPet</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="imageview_for_pillow">ImageView for pillow</string>
+    <string name="imageview_for_pet_texture">ImageView for pet texture</string>
+    <string name="button_navigating_to_previous_fragment">Button with image for navigating to previous fragment</string>
+    <string name="button_navigationg_to_next_fragment">Image button for navigationg to next fragment</string>
+    <string name="energy">Energy:</string>
+    <string name="hunger">Hunger:</string>
+    <string name="age">Age:</string>
+    <string name="_0">0</string>
+    <string name="button_for_music_toggle">Button for music toggle</string>
+    <string name="_100">100</string>
+    <string name="bedroom_background_image_view">bedroom background image view</string>
+    <string name="pillow_texture_in_bedroom_image_view">pillow texture in bedroom image view</string>
+    <string name="button_for_instant_pet_grow_up">button for instant pet grow up</string>
+    <string name="kitchen_background_image_view">kitchen background image view</string>
+    <string name="button_for_feeding_pet">button for feeding pet</string>
+    <string name="name_selection_background_image_view">name selection background image view</string>
+    <string name="danny">Danny</string>
+    <string name="eggs_election_background_image_view">eggs election background image view</string>
+    <string name="fire_egg_button_image">fire egg button image</string>
+    <string name="grass_egg_button_image">grass egg button image</string>
+    <string name="water_egg_button_image">water egg button image</string>
+</resources>

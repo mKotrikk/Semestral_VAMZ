@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C3BCA2"
+    tools:context=".game.GameActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment_game_activity"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="729dp"
+        android:layout_marginTop="5dp"
+        app:defaultNavHost="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soundButton"
+        app:navGraph="@navigation/game_navigation" />
+
+    <ImageView
+        android:id="@+id/pillow_iv"
+        android:layout_width="315dp"
+        android:layout_height="147dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pet_iv"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/pillow_scaled"
+        android:contentDescription="@string/imageview_for_pillow" />
+
+    <ImageView
+        android:id="@+id/pet_iv"
+        android:layout_width="209dp"
+        android:layout_height="208dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/fire_egg_scaled"
+        android:contentDescription="@string/imageview_for_pet_texture" />
+
+    <ImageButton
+        android:id="@+id/prevFragmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="prevFragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/arrow_left_scaled"
+        android:contentDescription="@string/button_navigating_to_previous_fragment" />
+
+    <ImageButton
+        android:id="@+id/nextFragmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="nextFragment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/arrod_right_scaled"
+        android:contentDescription="@string/button_navigationg_to_next_fragment" />
+
+    <View
+        android:id="@+id/night_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/energyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/energy"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment_game_activity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <TextView
+        android:id="@+id/hungerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/hunger"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment_game_activity"
+        app:layout_constraintStart_toEndOf="@+id/energyEditText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/age"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment_game_activity"
+        app:layout_constraintStart_toEndOf="@+id/hungerEditText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ageEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment_game_activity"
+        app:layout_constraintStart_toEndOf="@+id/ageTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/soundButton"
+        android:layout_width="52dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="#00FFFFFF"
+        android:onClick="toggleMusic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/unmute_scaled"
+        android:contentDescription="@string/button_for_music_toggle" />
+
+    <TextView
+        android:id="@+id/energyEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_100"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment_game_activity"
+        app:layout_constraintStart_toEndOf="@+id/energyTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hungerEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_100"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_host_fragment_game_activity"
+        app:layout_constraintStart_toEndOf="@+id/hungerTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

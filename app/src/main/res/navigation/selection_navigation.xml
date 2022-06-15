@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selection_navigation"
+    app:startDestination="@id/typeSelectionFragment">
+
+    <fragment
+        android:id="@+id/typeSelectionFragment"
+        android:name="com.mkotrik.tamagopet.selection.fragments.TypeSelectionFragment"
+        android:label="fragment_type_selection"
+        tools:layout="@layout/fragment_type_selection" >
+        <action
+            android:id="@+id/action_typeSelectionFragment_to_nameSelectionFragment"
+            app:destination="@id/nameSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nameSelectionFragment"
+        android:name="com.mkotrik.tamagopet.selection.fragments.NameSelectionFragment"
+        android:label="fragment_name_selection"
+        tools:layout="@layout/fragment_name_selection" />
+</navigation>
